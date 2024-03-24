@@ -1,2 +1,2 @@
 # crawling-pre-filter
-a pre-filter to fetch sites with seed and key-words
+a pre-filter to fetch sites starting with seed-URL and key-words
