@@ -1,3 +1,6 @@
+#  Copyright (c) 18.04.2024 [D. P.]
+#  All rights reserved.
+
 import requests
 from bs4 import BeautifulSoup
 from sklearn.feature_extraction.text import CountVectorizer
