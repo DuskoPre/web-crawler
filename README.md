@@ -1,5 +1,6 @@
 # crawling-pre-filter
 a pre-filter to fetch sites depending on key-words, which the seed-URL(s) have
+
 Description by ChatGPT (Version from 240913)
 
 The main advantages of the crawl-script you’re working on are related to its ability to perform customized, targeted web scraping and classification of web content. Here are the key benefits of this crawler:
