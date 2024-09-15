@@ -163,3 +163,62 @@ In this pipeline, a large language model (LLM) like GPT-3 or BERT is not used. T
 - **Prediction**: Uses the trained model to determine the class of new text documents based on computed probabilities.
 
 This basic pipeline provides a foundational approach to text classification without leveraging advanced LLMs.
+
+** **
+
+# Web Crawler Script Summary
+
+## Overview
+This script implements a web crawler designed to navigate websites, extract information, and classify pages based on relevance. It's built with a focus on efficiency, ethical crawling practices, and scalability.
+
+## Key Components
+
+1. **Crawler Class**
+   - Main class that orchestrates the crawling process
+   - Manages URL fetching, content extraction, and classification
+   - Implements caching and domain banning mechanisms
+
+2. **SimpleVectorizer Class**
+   - Converts text data into numerical vectors for machine learning purposes
+   - Uses a bag-of-words approach with term frequency
+
+3. **SimpleNaiveBayes Class**
+   - Implements a basic Naive Bayes classifier for page relevance prediction
+
+4. **URL Fetching and Parsing**
+   - Utilizes `requests` library for HTTP requests
+   - Implements retry logic and connection pooling
+   - Uses `BeautifulSoup` for HTML parsing
+
+5. **Robots.txt Compliance**
+   - `can_fetch` method to check and respect robots.txt rules
+
+6. **Concurrency**
+   - Uses `ThreadPoolExecutor` for parallel processing of URLs
+
+7. **Caching and Resource Management**
+   - Implements an in-memory cache for fetched URLs
+   - Uses `psutil` to determine optimal number of worker threads
+
+8. **Logging and Error Handling**
+   - Comprehensive logging throughout the script
+   - Try-except blocks for robust error handling
+
+9. **Classification System**
+   - Combines keyword-based and machine learning approaches
+   - Classifies pages based on relevance to specified topics
+
+10. **Main Execution Logic**
+    - Initializes the crawler with seed URLs
+    - Trains the classifier on initial data
+    - Executes the crawling process
+
+## Key Features
+- Ethical crawling with robots.txt compliance
+- Scalable design with concurrent processing
+- Adaptive resource utilization
+- Combination of rule-based and ML-based classification
+- Robust error handling and logging
+
+## Usage
+The script is designed to be run as a standalone program. It starts with a set of seed URLs, trains a classifier on their content, and then crawls the web based on the learned patterns and specified rules.
